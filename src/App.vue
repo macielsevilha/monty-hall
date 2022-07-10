@@ -3,14 +3,19 @@
         <div class="header">
             <h1>Problema do Monty Hall</h1>
             <form action="">
-                <label for="quantityPort">Quantas portas?</label>
-                <input type="text" name="quantityPort" size="3">
+                <label for="portsAmount">Quantas portas?</label>
+                <input type="text" id="portsAmount" v-model.number="portsAmount" name="portsAmount" size="3">
                 <label for="firstPort">Qual a porta premiada?</label>
                 <input type="text" name="firstPort" size="3"> <br />
-                <button @click="started = true">Iniciar</button> <br />
-                <button @click="started = false">Reinicar</button>
+                <button v-if="!started" @click="started = true">Iniciar</button> <br />
+                <button v-if="started"  @click="started = false">Reinicar</button>
+                <div class="doors" v-if="started">
+                  <div v-for="i in portsAmount" :key="i">
+                    <door-vue :which="i === selectedPort" :number="i" />
+                  </div>
+                </div>
             </form>
-            <door-vue />
+           
         </div>
     </div>
 </template>
@@ -24,7 +29,7 @@ export default {
     data: function() {
        return {
         started: false,
-        portAmount: 3,
+        portsAmount: 3,
         selectedPort: null
        }
       
@@ -70,5 +75,17 @@ body {
     width: 80px;
     border: 2px solid var(--border-first);
 
+}
+.doors {
+  display: flex;
+  justify-content: center;
+   flex-wrap: wrap;
+}
+.doors div{
+   display: flex;
+   align-self: stretch;
+   justify-content: space-around;
+  
+    margin: 10px;
 }
 </style>
