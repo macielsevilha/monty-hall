@@ -3,7 +3,7 @@
       <div class="door-frame" :class="{selected: selected}">
         <gift-vue v-if="which == !open" />
       </div>
-      <div class="door" @click="selected = !selected">
+      <div class="door" :class="{open}" @click="selected = !selected">
         <div class="number"></div>
         <div class="knop" :class="{selected}" @click.stop="open = true"></div>
       </div>
@@ -35,6 +35,9 @@ export default {
 :root {
   --border-door: 10px solid yellow;
   --border-selected: 10px solid green;
+
+  --closed-door: blue;
+  --open-door: #444;
 }
 
 .door-area{
@@ -64,7 +67,7 @@ export default {
 .door {
   position: absolute;
   border-bottom: 10px solid #fff;
-  background-color: #444;
+  background-color: var(--closed-door);
   height: 290px;
   width: 200px;
   top: 10px;
@@ -88,11 +91,16 @@ export default {
   z-index: 20;
 }
 .door-frame.selected{
-  background: red;
-  position: absolute;
   border-top: var(--border-selected);
   border-right: var(--border-selected);
   border-left: var(--border-selected);
+}
+
+.door > .knop.selected {
+  background-color: var();
+}
+.door.open{
+  background-color: red;
 }
 
 </style>
