@@ -1,7 +1,7 @@
 <template>
   <div class="door-area">
-      <div class="door-frame" :class="{selected: selected}">
-        <gift-vue v-if="which == !open" />
+      <div class="door-frame" :class="{selected: selected && !open}">
+        <gift-vue v-if="open && which" />
       </div>
       <div class="door" :class="{open}" @click="selected = !selected">
         <div class="number"></div>
@@ -23,7 +23,7 @@ export default {
   data: function() {
     return {
       open: false,
-      selected: false
+      selected: true
     }
   }
 
@@ -47,7 +47,7 @@ export default {
 }
 .door-frame{
  
-  background-color: brown;
+  background-color: red;
   height: 300px;
   width: 220px;
   z-index: 10;
@@ -101,6 +101,7 @@ export default {
 }
 .door.open{
   background-color: red;
+  z-index: -10;
 }
 
 </style>

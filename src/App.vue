@@ -6,7 +6,7 @@
                 <label for="portsAmount">Quantas portas?</label>
                 <input type="text" id="portsAmount" v-model.number="portsAmount" name="portsAmount" size="3">
                 <label for="firstPort">Qual a porta premiada?</label>
-                <input type="text" name="firstPort" size="3"> <br />
+                <input type="text" size="3" v-model.number="selectedPort" name="selectedPort"> <br />
                 <button v-if="!started" @click="started = true">Iniciar</button> <br />
                 <button v-if="started"  @click="started = false">Reinicar</button>
                 <div class="doors" v-if="started">
@@ -15,7 +15,6 @@
                   </div>
                 </div>
             </form>
-           
         </div>
     </div>
 </template>
@@ -30,7 +29,7 @@ export default {
        return {
         started: false,
         portsAmount: 3,
-        selectedPort: null
+        selectedPort: 1
        }
       
     }

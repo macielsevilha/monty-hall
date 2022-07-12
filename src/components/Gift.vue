@@ -22,8 +22,8 @@ export default {
 
 .gift {
     position: relative;
-    margin-top: 60px;
-
+    z-index: 40;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
