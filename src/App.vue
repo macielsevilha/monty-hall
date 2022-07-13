@@ -7,8 +7,10 @@
                 <input type="text" id="portsAmount" v-model.number="portsAmount" name="portsAmount" size="3">
                 <label for="firstPort">Qual a porta premiada?</label>
                 <input type="text" size="3" v-model.number="selectedPort" name="selectedPort"> <br />
-                <button v-if="!started" @click="started = true">Iniciar</button> <br />
+               <div class="buttons">
+                  <button v-if="!started" @click="started = true">Iniciar</button>
                 <button v-if="started"  @click="started = false">Reinicar</button>
+               </div>
                 <div class="doors" v-if="started">
                   <div v-for="i in portsAmount" :key="i">
                     <door-vue :which="i === selectedPort" :number="i" />
@@ -31,9 +33,7 @@ export default {
         portsAmount: 3,
         selectedPort: 1
        }
-      
     }
-   
 }
 
 </script>
@@ -74,6 +74,15 @@ body {
     width: 80px;
     border: 2px solid var(--border-first);
 
+}
+.buttons button {
+ padding: 12px 25px;
+ margin: 20px;
+ border: 1px solid var(--border-first);
+ border-radius: 5px;
+ background-color: #00b4a3;
+ color: white;
+ font-size: 15px;
 }
 .doors {
   display: flex;
