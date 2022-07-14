@@ -80,7 +80,7 @@ body {
  margin: 20px;
  border: 1px solid var(--border-first);
  border-radius: 5px;
- background-color: #00b4a3;
+background-image: radial-gradient(circle at 99.78% 21.26%, #a6f0be 0, #96ebbf 12.5%, #7ee3bc 25%, #5dd6b5 37.5%, #1fc5ab 50%, #00b4a3 62.5%, #00a79f 75%, #009ea0 87.5%, #0098a5 100%);
  color: white;
  font-size: 15px;
 }

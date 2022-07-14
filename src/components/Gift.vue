@@ -15,46 +15,58 @@ export default {
 
 <style>
 :root {
-    --gift-border-tie: red;
-    --gift-border-top: yellow;
+    --gift-border-tie: rgb(184, 17, 17);
+    --gift-border-top: rgb(26, 26, 26);
     --gift-body: green;
 }
 
 .gift {
-    position: relative;
-    z-index: 40;
-    margin-top: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   position: relative;
 }
 
 .gift-top {
-    height: 15px;
-    width: 80px;
-    background-color: var(--gift-border-top);
+  position: absolute;
+  
+  z-index: 10;
+  width: 105px;
+  height: 25px;
+  background-color: var(--gift-border-top);
+  border: 1px solid black;
+
 }
 
 .gift-tie-1 {
-    height: 10px;
-    width: 80px;
-    background-color: var(--gift-border-tie);
-    
-    position: absolute;
-    top:40px;
+ position: absolute;
+ 
+ z-index: 20;
+ width: 100px;
+ height: 20px;
+ top: 50px;
+
+ background-color: var(--gift-border-tie);
+
 }
 
 .gift-tie-2 {
-    height: 85px;
-    width: 10px;
-    background-color: var(--gift-border-tie);
+ position: absolute;
+ 
+ z-index: 5;
+ width: 20px;
+ height: 100px;
+ 
 
-    position: absolute;
+ background-color: var(--gift-border-tie);
+
 }
 
 .gift-body {
-    height: 70px;
-    width: 80px;
-    background-color: var(--gift-body);
+   width: 100px;
+   height: 100px;
+   background-color: var(--gift-body);
+  
+   position: absolute;
+
+  
+
 }
 </style>
