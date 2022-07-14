@@ -33,10 +33,10 @@ export default {
 <style>
 
 :root {
-  --border-door: 10px solid yellow;
-  --border-selected: 10px solid green;
+  --border-door: 10px solid rgb(90, 90, 23);
+  --border-selected: 10px solid rgb(255, 197, 8);
 
-  --closed-door: blue;
+  --closed-door: rgb(126, 88, 18);
   --open-door: #444;
 }
 
@@ -47,7 +47,7 @@ export default {
 }
 .door-frame{
  
-  background-color: red;
+  background-color: var();
   height: 300px;
   width: 220px;
   z-index: 10;
@@ -69,7 +69,7 @@ export default {
   border-bottom: 10px solid #fff;
   background-color: var(--closed-door);
   height: 290px;
-  width: 200px;
+  width: 183px;
   top: 10px;
   z-index: 10;
 
@@ -83,7 +83,7 @@ export default {
 .knop {
   height: 20px;
   width: 20px;
-  background-color: yellow;
+  background-color:  rgb(61, 61, 61);
   border-radius: 10px;
   align-self: flex-start;
   margin-left: 40px;
@@ -100,7 +100,7 @@ export default {
   background-color: var();
 }
 .door.open{
-  background-color: red;
+  background-color: rgb(61, 61, 61);
   z-index: -10;
 }
 

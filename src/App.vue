@@ -40,7 +40,7 @@ export default {
 
 <style>
 :root {
-    --border-first: green;
+    --border-first: rgb(19, 19, 19);
 }
 
 @font-face {
@@ -64,7 +64,9 @@ body {
     text-align: center;
 
 }
-
+#app h1{
+    color: rgb(22, 22, 22);
+}
 #app form label {
     padding: 10px;
 }
@@ -76,12 +78,12 @@ body {
 
 }
 .buttons button {
- padding: 12px 25px;
+ padding: 11px 25px;
  margin: 20px;
  border: 1px solid var(--border-first);
  border-radius: 5px;
-background-image: radial-gradient(circle at 99.78% 21.26%, #a6f0be 0, #96ebbf 12.5%, #7ee3bc 25%, #5dd6b5 37.5%, #1fc5ab 50%, #00b4a3 62.5%, #00a79f 75%, #009ea0 87.5%, #0098a5 100%);
- color: white;
+ background: #fcc40d;
+ color: rgb(97, 8, 8);
  font-size: 15px;
 }
 .doors {
