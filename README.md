@@ -4,7 +4,7 @@
 
 ### I created this project with HTML, CSS and vue framework. I needed watch  videos in udemy to make the project about problem monty hall. 
 
-<img href='./public/images/monty-hall.png' />
+<img src='./public/images/monty-hall.png' />
 
 ## Project setup
 ```
