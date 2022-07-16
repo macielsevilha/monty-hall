@@ -66,7 +66,5 @@ export default {
   
    position: absolute;
 
-  
-
 }
 </style>
